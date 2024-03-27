@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Dependency Review
-        uses: github/dependency-review-action@v1
+        uses: actions/dependency-review-action@v1
         with:
           # Fail the check if a dependency with a known vulnerability is added
           fail-on-alert: true
