@@ -1,7 +1,7 @@
 name: Dependency Review
 
 on:
-  pull_request_target:
+  pull_request:
 
 jobs:
   dependency-review:
@@ -13,13 +13,4 @@ jobs:
       - name: Run Dependency Review
         uses: actions/dependency-review-action@v1
         with:
-          # Fail the check if a dependency with a known vulnerability is added
-          fail-on-alert: true
-
-          # Optional: Specify allowed licenses
-          allowed-licenses: |
-            Apache-2.0
-            BSD-2-Clause
-            BSD-3-Clause
-            MIT
-            CPOL
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
