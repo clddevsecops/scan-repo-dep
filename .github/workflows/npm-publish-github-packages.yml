@@ -14,4 +14,4 @@ jobs:
         uses: actions/dependency-review-action@v4
         with:
           # Use comma-separated names to pass list arguments:
-          allow-licenses: GPL-3.0, BSD-3-Clause, MIT
+          allow-licenses: GPL-3.0, BSD-3-Clause, MIT, Apache-2.0
