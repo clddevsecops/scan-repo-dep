@@ -8,6 +8,10 @@ jobs:
   dependency-review:
     runs-on: windows-latest
     steps:
+      - name: sast
+        uses: AppThreat/sast-scan-action@master
+        with:
+           type: "python"
       - name: 'Checkout Repository'
         uses: actions/checkout@v4
       - name: 'Dependency Review'
@@ -15,3 +19,5 @@ jobs:
         with:
           # Use comma-separated names to pass list arguments:
           allow-licenses: GPL-3.0, BSD-3-Clause, MIT, Apache-2.0
+
+      
